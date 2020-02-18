@@ -1,4 +1,4 @@
-const getTodos = (callback) => {
+const getTodos = (resource, callback) => {
 
   const request = new XMLHttpRequest();
 
@@ -13,16 +13,17 @@ const getTodos = (callback) => {
 
   });
   
-  request.open('GET', 'todos.json');
+  request.open('GET', resource);
   request.send();
 
 };
 
-getTodos((err, data) => {
-  console.log('callback function fired');
-  if(err){
-    console.log(err);
-  } else {
+getTodos('json/luigi.json', (err, data) => {
+  console.log(data);
+  getTodos('json/mario.json', (err, data) => {
     console.log(data);
-  }
+    getTodos('json/shaun.json', (err, data) => {
+      console.log(data);
+    });
+  });
 });
