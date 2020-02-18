@@ -1,12 +1,13 @@
-// callbacks & forEach
-let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+const ul = document.querySelector('.people');
 
-const logPerson = (person, index) => {
-  console.log(`${index} - hello ${person}`);
-}
+const people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
 
-// people.forEach(person => {
-//   console.log(`hello ${person}`);
-// });
+let html = ``;
 
-people.forEach(logPerson);
+people.forEach(person => {
+  // create html template for each person
+  html += `<li style="color: purple">${person}</li>`;
+});
+
+console.log(html);
+ul.innerHTML = html;
