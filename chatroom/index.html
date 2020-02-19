@@ -51,6 +51,22 @@
     </form>
   </div>
   
+  
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAYoBiOlFfKB08ycUZiVWVRh3Ifb0GXAJI",
+      authDomain: "modern-javascript-60093.firebaseapp.com",
+      databaseURL: "https://modern-javascript-60093.firebaseio.com",
+      projectId: "modern-javascript-60093",
+      storageBucket: "modern-javascript-60093.appspot.com",
+      messagingSenderId: "816040487386"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+  </script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>
